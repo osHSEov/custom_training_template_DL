@@ -12,7 +12,7 @@ A flexible and modular PyTorch training template for deep learning tasks, design
 * Visualization: Plot training and validation loss/metric curves using Matplotlib.
 * Example Included: A simple Convolutional Neural Network (CNN) trained on the MNIST dataset.
 
-## Future API Reference
+## API Reference
 
 ### Device Management
 - **`move_to_device(batch, device)`**  
