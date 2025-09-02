@@ -12,4 +12,53 @@ A flexible and modular PyTorch training template for deep learning tasks, design
 * Visualization: Plot training and validation loss/metric curves using Matplotlib.
 * Example Included: A simple Convolutional Neural Network (CNN) trained on the MNIST dataset.
 
+## Future API Reference
 
+### Device Management
+- **`move_to_device(batch, device)`**  
+  Move data to the specified device (CPU/GPU).
+
+- **`get_autocast(use_amp, device)`**  
+  Returns a context manager for mixed precision training.
+
+- **`get_grad_scaler(use_amp)`**  
+  Returns a gradient scaler for mixed precision training.
+
+---
+
+### Checkpointing
+- **`save_checkpoint(model, optimizer, scheduler, epoch, best_score, path)`**  
+  Save a model checkpoint.
+
+- **`load_checkpoint(model, optimizer, scheduler, path, device)`**  
+  Load a model checkpoint.
+
+---
+
+### Training
+- **`train(model, optimizer, n_epochs, train_loader, val_loader, ...)`**  
+  Train the model with customizable options.
+
+- **`train_epoch(model, optimizer, loader, loss_fn, device, ...)`**  
+  Train the model for one epoch.
+
+- **`evaluate(model, loader, loss_fn, device, metric_fn)`**  
+  Evaluate the model on a dataset.
+
+---
+
+### Metrics (basic ones)
+- **`accuracy(predictions, target)`**  
+  Compute classification accuracy.
+
+- **`binary_accuracy(predictions, target)`**  
+  Compute binary classification accuracy.
+
+- **`mse(predictions, target)`**  
+  Compute mean squared error.
+
+---
+
+### Visualization
+- **`plot_reses(train_loss, train_metric, val_loss, val_metric, metric_name)`**  
+  Plot training and validation curves.
